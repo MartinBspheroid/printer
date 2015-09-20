@@ -243,7 +243,7 @@ void Plotter_glNextApp::SVG(const fs::path file)
 				// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
 				if (m.getSegmentType(i) == Path2d::LINETO){
 					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-					
+					mPlotter.drawLine(m.getSegmentPosition(i, 0.0f), m.getSegmentPosition(i, 1.0f));
 				}
 				if (m.getSegmentType(i) == Path2d::MOVETO){
 					mScript->call("void svgMoveTo()");

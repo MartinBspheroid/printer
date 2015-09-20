@@ -27,6 +27,11 @@ void Plotter::drawLine(float x1, float y1, float x2, float y2)
 	penUp();
 }
 
+void Plotter::drawLine(const vec2 &pos1, const vec2 &pos2)
+{
+	drawLine(pos1.x, pos1.y, pos2.x, pos2.y);
+}
+
 void Plotter::drawLineTo(float x, float y)
 {
 	move(x, y);
@@ -83,6 +88,11 @@ void Plotter::drawSpline(int x1, int y1, int x2, int y2, int angle)
 void Plotter::move(int x, int y)
 {
 	send("PA" + toString(x) + "," + toString(y) + ";\n");
+}
+
+void Plotter::move(const vec2 &pos)
+{
+	move(pos.x, pos.y);
 }
 
 void Plotter::selectPen(int number)
