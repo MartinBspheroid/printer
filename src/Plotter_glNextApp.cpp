@@ -60,8 +60,8 @@ public:
 };
 
 void Plotter_glNextApp::setup()
-{	
-	
+{
+
 	ui::initialize();
 	terminal.AddCallback([=](string data){
 		console() << data << endl;
@@ -102,13 +102,13 @@ void Plotter_glNextApp::setup()
 		if (mScript){
 			console() << "\n\tSCRIPT RELOADED\n\n" << endl;
 			mScript->call("void setup()");
-			
+
 		}
 		else{
 			console() << "\n\tSCRIPT RELOADED with ERRORS!\n\n" << endl;
 		}
 	});
-	mPlotter.setCallback([&](string data){pushSerialCommand(data);});
+	mPlotter.setCallback([&](string data){pushSerialCommand(data); });
 }
 
 
@@ -232,78 +232,44 @@ void Plotter_glNextApp::SVG(const fs::path file)
 	svg::DocRef	mDoc;
 	mDoc = svg::Doc::create(loadFile(file));
 
-	if (mScript) mScript->call("void svgInit()");
+	mPlotter.init();
+
+
 	for (auto s : mDoc->getChildren()){
-		int pen = 0;
 		auto c = s->getShapeAbsolute().getContours();
-		vec2 comparator = vec2(0, 0);
 		for (auto &m : c){
 			for (size_t i = 0; i < m.getNumSegments(); i++)
+
+				// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
+				switch (m.getSegmentType(i))
 			{
-				if (mScript){
-			
-					// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
-					
-					switch (m.getSegmentType(i))
-					{
-					case Path2d::MOVETO:
-						mScript->call("void svgMoveTo()");
-						break;
-					case Path2d::LINETO:
-						//mScript->set("bufX", m.getPoint(i).x);
-						//mScript->set("bufY", m.getPoint(i).y);
-						//mScript->call("void svgLineTo()");
-						//vec2 v1 = m.getSegmentPosition(i, 0);
-						//vec2 v2 = m.getSegmentPosition(i, 1);
-						mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-						break;
-					case Path2d::QUADTO:
-						mScript->call("void svgQuadTo()");
-						break;
-					case Path2d::CUBICTO:
-						mScript->call("void svgCubicTo()");
-
-						/*if (glm::distance(comparator, m.getSegmentPosition(i, 0)) < 0.01)
-						{
-							mScript->call("void beginLine(float x, float y)", m.getSegmentPosition(i, 0).x, m.getSegmentPosition(i, 0).y);
-						}
-						else
-						{
-							mScript->call("void drawLineTo(float x, float y)", m.getSegmentPosition(i, 0).x, m.getSegmentPosition(i, 0).y);
-						}*/
-						
-						//terminal.AddLog("segments" + toString(m.getNumSegments()).c_str());
-						for (float pos = 0.1; pos <= 1;){
-							vec2 v1 = m.getSegmentPosition(i, pos);
-							mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
-							pos += 0.1;
-						}
-						//mScript->call("void endLine(float x, float y)", m.getSegmentPosition(i, 1).x, m.getSegmentPosition(i, 1).y);
-						//comparator = m.getSegmentPosition(i, 1);
-						break;
-					case Path2d::CLOSE:
-						//mScript->call("void svgClose()");
-						
-						mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-						break;
-					default:
-						mScript->call("void svgDefault()");
-						break;
+				case Path2d::MOVETO:
+					mScript->call("void svgMoveTo()");
+					break;
+				case Path2d::LINETO:
+					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
+					break;
+				case Path2d::QUADTO:
+					mScript->call("void svgQuadTo()");
+					break;
+				case Path2d::CUBICTO:
+					mScript->call("void svgCubicTo()");
+					for (float pos = 0.1; pos <= 1;){
+						vec2 v1 = m.getSegmentPosition(i, pos);
+						mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
+						pos += 0.1;
 					}
-				}
-				
+					break;
+				case Path2d::CLOSE:
+					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
+					break;
+				default:
+					mScript->call("void svgDefault()");
+					break;
 			}
-			vec2 v2 = m.getSegmentPosition(0, 0);
-			vec2 v1 = m.getSegmentPosition(m.getNumSegments()-1, 1);
-			//mScript->call("drawLine()", v1.x, v1.y, v2.x, v2.y);
-		}
-	
-		
-		//mScript->call("void set()", 10, 10);
-		pen++;
 
+		}
 	}
-	mScript->call("void svgPrint()");
 }
 
 void Plotter_glNextApp::print(const string &data)
@@ -356,5 +322,5 @@ void Plotter_glNextApp::fileDrop(FileDropEvent event)
 	string ext = event.getFile(0).extension().string();
 	terminal.AddLog(ext.c_str());
 	svg_path = event.getFile(0);
-	
+
 }
