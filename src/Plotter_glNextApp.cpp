@@ -88,7 +88,6 @@ void Plotter_glNextApp::setup()
 	}
 	plot.setPath(getAssetPath(fs::path()) / "plot.plot");
 
-
 	asIScriptEngine *engine = as::Script::getEngine();
 	int r = engine->SetMessageCallback(asMETHOD(Plotter_glNextApp, handleErrors), this, asCALL_THISCALL);
 	assert(r >= 0);
@@ -100,12 +99,12 @@ void Plotter_glNextApp::setup()
 	bd.watch(getAssetPath(fs::path()) / "test.asc", [&]{
 		mScript = as::Script::create(loadAsset("test.asc"), "");
 		if (mScript){
-			console() << "\n\tSCRIPT RELOADED\n\n" << endl;
+			terminal.AddLog("---Script reloaded---");
 			mScript->call("void setup()");
 
 		}
 		else{
-			console() << "\n\tSCRIPT RELOADED with ERRORS!\n\n" << endl;
+			terminal.AddLog("\n\tSCRIPT RELOADED with ERRORS!\n\n");
 		}
 	});
 	mPlotter.setCallback([&](string data){pushSerialCommand(data); });
@@ -233,38 +232,40 @@ void Plotter_glNextApp::SVG(const fs::path file)
 	mDoc = svg::Doc::create(loadFile(file));
 
 	mPlotter.init();
+	mPlotter.setInputSize(0, 0, 100, 100);
+	mPlotter.setScale(7.5, 7.5);
+	mPlotter.selectPen(1);
 
 
 	for (auto s : mDoc->getChildren()){
 		auto c = s->getShapeAbsolute().getContours();
 		for (auto &m : c){
 			for (size_t i = 0; i < m.getNumSegments(); i++){
-
 				// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
 				if (m.getSegmentType(i) == Path2d::LINETO){
-					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
 					mPlotter.drawLine(m.getSegmentPosition(i, 0.0f), m.getSegmentPosition(i, 1.0f));
 				}
 				if (m.getSegmentType(i) == Path2d::MOVETO){
-					mScript->call("void svgMoveTo()");
+					mPlotter.moveTo();
 				}
 				if (m.getSegmentType(i) == Path2d::QUADTO){
-					mScript->call("void svgQuadTo()");
+					mPlotter.quadTo();
 				}
 				if (m.getSegmentType(i) == Path2d::CUBICTO){
-					mScript->call("void svgCubicTo()");
-					for (float pos = 0.1; pos <= 1;){
-						vec2 v1 = m.getSegmentPosition(i, pos);
-						mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
-						pos += 0.1;
+					float inc = 0.1;
+					for (float pos = inc; pos <= 1;){
+						mPlotter.drawLine(m.getSegmentPosition(i, pos-inc), m.getSegmentPosition(i, pos));
+						pos += inc;
 					}
 				}
 				if (m.getSegmentType(i) == Path2d::CLOSE){
-					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
+					mPlotter.drawLine(m.getSegmentPosition(i, 0.0f), m.getSegmentPosition(i, 1.0f));
+
 				}
 			}
 		}
 	}
+	pushSerialCommand("end");
 }
 
 void Plotter_glNextApp::print(const string &data)

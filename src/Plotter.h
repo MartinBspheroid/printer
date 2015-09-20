@@ -14,7 +14,7 @@ public:
 
 	float radians(float degrees);
 
-	std::string  setInputSize(int x1, int y1, int x2, int y2);
+	void  setInputSize(int x1, int y1, int x2, int y2);
 	void  setScale(int  x, int y);
 	void drawLine(float x1, float y1, float x2, float y2);
 	void drawLine(const glm::vec2 &pos1, const glm::vec2 &pos2);
@@ -45,7 +45,12 @@ public:
 
 	//-RA(Fill Rectangle Absolute)
 	void drawRectangle(int x1, int y1, int x2, int y2);
-
+	void quadTo(){
+		ci::app::console() << "QUAD TO is not yet implemented" << std::endl;
+	}
+	void moveTo(){
+		ci::app::console() << "MOVE TO is not yet implemented" << std::endl;
+	}
 
 	void setCallback(std::function<void(const std::string)> func){
 		callback = func;

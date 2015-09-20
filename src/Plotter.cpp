@@ -9,9 +9,9 @@ float Plotter::radians(float degrees)
 	return degrees * (3.14 / 180);
 }
 
-std::string Plotter::setInputSize(int x1, int y1, int x2, int y2)
+void Plotter::setInputSize(int x1, int y1, int x2, int y2)
 {
-	return "IP" + toString(x1) + "," + toString(y1) + "," + toString(x2) + "," + toString(y2) + ";\n";
+	send("IP" + toString(x1) + "," + toString(y1) + "," + toString(x2) + "," + toString(y2) + ";\n");
 }
 
 void Plotter::setScale(int x, int y)
