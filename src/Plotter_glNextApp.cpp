@@ -12,6 +12,9 @@
 #include "plotterExporter.h"
 #include "cinder/svg/Svg.h"
 #include "cinder/Vector.h"
+
+
+#include "Plotter.h"
 // freestanding message callback...
 
 void MessageCallback(const asSMessageInfo *msg, void *param)
@@ -51,10 +54,14 @@ public:
 	void fileDrop(FileDropEvent event) override;
 	fs::path svg_path;
 
+
+	Plotter mPlotter;
+
 };
 
 void Plotter_glNextApp::setup()
 {
+
 	ui::initialize();
 	terminal.AddCallback([=](string data){
 		console() << data << endl;
@@ -81,7 +88,6 @@ void Plotter_glNextApp::setup()
 	}
 	plot.setPath(getAssetPath(fs::path()) / "plot.plot");
 
-
 	asIScriptEngine *engine = as::Script::getEngine();
 	int r = engine->SetMessageCallback(asMETHOD(Plotter_glNextApp, handleErrors), this, asCALL_THISCALL);
 	assert(r >= 0);
@@ -93,15 +99,15 @@ void Plotter_glNextApp::setup()
 	bd.watch(getAssetPath(fs::path()) / "test.asc", [&]{
 		mScript = as::Script::create(loadAsset("test.asc"), "");
 		if (mScript){
-			console() << "\n\tSCRIPT RELOADED\n\n" << endl;
+			terminal.AddLog("---Script reloaded---");
 			mScript->call("void setup()");
-			
+
 		}
 		else{
-			console() << "\n\tSCRIPT RELOADED with ERRORS!\n\n" << endl;
+			terminal.AddLog("\n\tSCRIPT RELOADED with ERRORS!\n\n");
 		}
 	});
-
+	mPlotter.setCallback([&](string data){pushSerialCommand(data); });
 }
 
 
@@ -176,6 +182,13 @@ void Plotter_glNextApp::update()
 			terminal.AddLog("file is not yet loaded");
 		}
 	}
+	ui::SameLine();
+	if (ui::Button("PenTest")){
+		mPlotter.selectPen(1);
+		mPlotter.selectPen(2);
+		mPlotter.selectPen(3);
+	}
+
 
 }
 
@@ -210,6 +223,7 @@ void Plotter_glNextApp::cleanup()
 {
 	mSerial->flush();
 	mSerial->close();
+	ui::Shutdown();
 }
 
 void Plotter_glNextApp::SVG(const fs::path file)
@@ -217,78 +231,41 @@ void Plotter_glNextApp::SVG(const fs::path file)
 	svg::DocRef	mDoc;
 	mDoc = svg::Doc::create(loadFile(file));
 
-	if (mScript) mScript->call("void svgInit()");
-	for (auto s : mDoc->getChildren()){
-		int pen = 0;
-		auto c = s->getShapeAbsolute().getContours();
-		vec2 comparator = vec2(0, 0);
-		for (auto &m : c){
-			for (size_t i = 0; i < m.getNumSegments(); i++)
-			{
-				if (mScript){
-			
-					// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
-					
-					switch (m.getSegmentType(i))
-					{
-					case Path2d::MOVETO:
-						mScript->call("void svgMoveTo()");
-						break;
-					case Path2d::LINETO:
-						//mScript->set("bufX", m.getPoint(i).x);
-						//mScript->set("bufY", m.getPoint(i).y);
-						//mScript->call("void svgLineTo()");
-						//vec2 v1 = m.getSegmentPosition(i, 0);
-						//vec2 v2 = m.getSegmentPosition(i, 1);
-						mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-						break;
-					case Path2d::QUADTO:
-						mScript->call("void svgQuadTo()");
-						break;
-					case Path2d::CUBICTO:
-						mScript->call("void svgCubicTo()");
+	mPlotter.init();
+	mPlotter.setInputSize(0, 0, 100, 100);
+	mPlotter.setScale(7.5, 7.5);
+	mPlotter.selectPen(1);
 
-						/*if (glm::distance(comparator, m.getSegmentPosition(i, 0)) < 0.01)
-						{
-							mScript->call("void beginLine(float x, float y)", m.getSegmentPosition(i, 0).x, m.getSegmentPosition(i, 0).y);
-						}
-						else
-						{
-							mScript->call("void drawLineTo(float x, float y)", m.getSegmentPosition(i, 0).x, m.getSegmentPosition(i, 0).y);
-						}*/
-						
-						terminal.AddLog("segments" + toString(m.getNumSegments()).c_str());
-						for (float pos = 0.1; pos <= 1;){
-							vec2 v1 = m.getSegmentPosition(i, pos);
-							mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
-							pos += 0.1;
-						}
-						//mScript->call("void endLine(float x, float y)", m.getSegmentPosition(i, 1).x, m.getSegmentPosition(i, 1).y);
-						//comparator = m.getSegmentPosition(i, 1);
-						break;
-					case Path2d::CLOSE:
-						//mScript->call("void svgClose()");
-						
-						mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-						break;
-					default:
-						mScript->call("void svgDefault()");
-						break;
+
+	for (auto s : mDoc->getChildren()){
+		auto c = s->getShapeAbsolute().getContours();
+		for (auto &m : c){
+			for (size_t i = 0; i < m.getNumSegments(); i++){
+				// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
+				if (m.getSegmentType(i) == Path2d::LINETO){
+					mPlotter.drawLine(m.getSegmentPosition(i, 0.0f), m.getSegmentPosition(i, 1.0f));
+				}
+				if (m.getSegmentType(i) == Path2d::MOVETO){
+					mPlotter.moveTo();
+				}
+				if (m.getSegmentType(i) == Path2d::QUADTO){
+					mPlotter.quadTo();
+				}
+				if (m.getSegmentType(i) == Path2d::CUBICTO){
+					float inc = 0.1;
+					for (float pos = inc; pos <= 1;){
+						mPlotter.drawLine(m.getSegmentPosition(i, pos-inc), m.getSegmentPosition(i, pos));
+						pos += inc;
 					}
 				}
-				
-			}
-			vec2 v2 = m.getSegmentPosition(0, 0);
-			vec2 v1 = m.getSegmentPosition(m.getNumSegments()-1, 1);
-			//mScript->call("drawLine()", v1.x, v1.y, v2.x, v2.y);
-		}
-	
-		
-		//mScript->call("void set()", 10, 10);
-		pen++;
+				if (m.getSegmentType(i) == Path2d::CLOSE){
+					mPlotter.drawLine(m.getSegmentPosition(i, 0.0f), m.getSegmentPosition(i, 1.0f));
 
+				}
+			}
+		}
 	}
-	mScript->call("void svgPrint()");
+	pushSerialCommand("end");
 }
 
 void Plotter_glNextApp::print(const string &data)
@@ -341,5 +318,5 @@ void Plotter_glNextApp::fileDrop(FileDropEvent event)
 	string ext = event.getFile(0).extension().string();
 	terminal.AddLog(ext.c_str());
 	svg_path = event.getFile(0);
-	
+
 }
