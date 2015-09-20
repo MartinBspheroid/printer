@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2834.646px" height="2834.646px" viewBox="-963.78 -1162.205 2834.646 2834.646"
+	 enable-background="new -963.78 -1162.205 2834.646 2834.646" xml:space="preserve">
+<pattern  x="312.043" y="396.618" width="37.795" height="37.795" patternUnits="userSpaceOnUse" id="bggrid" viewBox="0 -37.795 37.795 37.795" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 37.795,0 37.795,-37.795 0,-37.795 		"/>
+		<polygon fill="#808080" points="1.89,-1.89 35.906,-1.89 35.906,-35.906 1.89,-35.906 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="37.795" height="56.693" patternUnits="userSpaceOnUse" id="centergrid" viewBox="188.977 -245.669 37.795 56.693" overflow="visible">
+	<g>
+		<polygon fill="none" points="188.977,-188.976 226.772,-188.976 226.772,-245.669 188.977,-245.669 		"/>
+		<polygon fill="#FFFFFF" points="0,0 37.795,0 37.795,-56.693 0,-56.693 		"/>
+		<polygon points="1.89,-1.89 35.906,-1.89 35.906,-54.803 1.89,-54.803 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="8.315" height="75.591" patternUnits="userSpaceOnUse" id="grating10" viewBox="0 -340.158 8.315 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-264.567 8.315,-264.567 8.315,-340.158 0,-340.158 		"/>
+		<polygon points="0,0 4.158,0 4.158,-75.591 0,-75.591 		"/>
+		<polygon fill="#FFFFFF" points="4.158,0 8.315,0 8.315,-75.591 4.158,-75.591 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="5.545" height="75.591" patternUnits="userSpaceOnUse" id="grating15" viewBox="0 -340.158 5.545 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-264.567 5.545,-264.567 5.545,-340.158 0,-340.158 		"/>
+		<polygon points="0,0 2.797,0 2.797,-75.591 0,-75.591 		"/>
+		<polygon fill="#FFFFFF" points="2.759,0 5.518,0 5.518,-75.591 2.759,-75.591 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="4.157" height="75.591" patternUnits="userSpaceOnUse" id="grating20" viewBox="0 -340.158 4.157 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-264.567 4.158,-264.567 4.158,-340.158 0,-340.158 		"/>
+		<polygon points="0,0 2.079,0 2.079,-75.591 0,-75.591 		"/>
+		<polygon fill="#FFFFFF" points="2.079,0 4.158,0 4.158,-75.591 2.079,-75.591 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="3.326" height="75.591" patternUnits="userSpaceOnUse" id="grating25" viewBox="0 -340.158 3.326 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-264.567 3.326,-264.567 3.326,-340.158 0,-340.158 		"/>
+		<polygon points="0,0 1.663,0 1.663,-75.591 0,-75.591 		"/>
+		<polygon fill="#FFFFFF" points="1.663,0 3.326,0 3.326,-75.591 1.663,-75.591 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="16.63" height="75.591" patternUnits="userSpaceOnUse" id="grating5" viewBox="0 -340.158 16.63 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-264.567 16.63,-264.567 16.63,-340.158 0,-340.158 		"/>
+		<polygon points="0,0 8.315,0 8.315,-75.591 0,-75.591 		"/>
+		<polygon fill="#FFFFFF" points="8.315,0 16.63,0 16.63,-75.591 8.315,-75.591 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="75.591" height="75.591" patternUnits="userSpaceOnUse" id="horbordergrid" viewBox="0 -75.591 75.591 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 75.591,0 75.591,-75.591 0,-75.591 		"/>
+		<polygon points="1.89,-39.685 35.906,-39.685 35.906,-73.701 1.89,-73.701 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="52.157" height="37.795" patternUnits="userSpaceOnUse" id="uppercheck" viewBox="226.772 -151.181 52.157 37.795" overflow="visible">
+	<g>
+		<polygon fill="none" points="226.772,-113.386 278.929,-113.386 278.929,-151.181 226.772,-151.181 		"/>
+		<polygon points="0,0 26.079,0 26.079,-37.795 0,-37.795 		"/>
+		<polygon fill="#BEBEBE" points="26.079,0 52.158,0 52.158,-37.795 26.079,-37.795 		"/>
+	</g>
+</pattern>
+<pattern  x="312.043" y="396.618" width="75.591" height="75.591" patternUnits="userSpaceOnUse" id="vertbordergrid" viewBox="0 -75.591 75.591 75.591" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 75.591,0 75.591,-75.591 0,-75.591 		"/>
+		<polygon points="39.685,-1.89 73.701,-1.89 73.701,-35.906 39.685,-35.906 		"/>
+	</g>
+</pattern>
+<title>Widescreen test pattern</title>
+<desc>Created 2009 March 28 by Lawrence D&apos;Oliveiro &lt;ldo@geek-central.gen.nz&gt;,
+	released under the Creative Commons Attribution Share Alike (CC-BY-SA) licence</desc>
+<defs>
+	
+	<desc>construction of corner radials</desc>
+	<desc>one quadrant of rays</desc>
+	<desc>put the lot together</desc>
+	<desc>one quadrant of rays</desc>
+	<desc>one quadrant of rays</desc>
+	<desc>one quadrant of rays</desc>
+	<desc>one quadrant of rays</desc>
+</defs>
+<desc>background</desc>
+<rect x="-954.882" y="-535.597" fill="#FFFFFF" width="2768.08" height="1557.045"/>
+<pattern  id="SVGID_1_" xlink:href="#bggrid" patternTransform="matrix(3.7795 0 0 -3.7795 25766.082 -33238.7227)">
+</pattern>
+<rect x="-897.214" y="-506.763" fill="url(#SVGID_1_)" width="2652.743" height="1499.376"/>
+<desc>overscan</desc>
+<pattern  id="SVGID_2_" xlink:href="#vertbordergrid" patternTransform="matrix(3.7795 0 0 -3.7795 25623.2324 -33419.3633)">
+</pattern>
+<rect x="-954.882" y="-535.597" fill="url(#SVGID_2_)" width="57.668" height="1557.045"/>
+<pattern  id="SVGID_3_" xlink:href="#vertbordergrid" patternTransform="matrix(3.7795 0 0 -3.7795 25623.2324 -33419.3633)">
+</pattern>
+<rect x="1755.529" y="-535.597" fill="url(#SVGID_3_)" width="57.668" height="1557.045"/>
+<pattern  id="SVGID_4_" xlink:href="#horbordergrid" patternTransform="matrix(3.7795 0 0 -3.7795 25623.2324 -33419.3633)">
+</pattern>
+<rect x="-897.214" y="-535.597" fill="url(#SVGID_4_)" width="2768.08" height="57.668"/>
+<pattern  id="SVGID_5_" xlink:href="#horbordergrid" patternTransform="matrix(3.7795 0 0 -3.7795 25623.2324 -33419.3633)">
+</pattern>
+<rect x="-897.214" y="992.614" fill="url(#SVGID_5_)" width="2768.08" height="57.668"/>
+<desc>central circular pattern</desc>
+<g>
+	<defs>
+		<circle id="SVGID_6_" cx="429.158" cy="242.925" r="692.02"/>
+	</defs>
+	<clipPath id="SVGID_7_">
+		<use xlink:href="#SVGID_6_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_7_)">
+		<desc>place for upper caption</desc>
+		<rect x="-32.189" y="-449.094" fill="#FFFFFF" width="922.693" height="173.005"/>
+		<rect x="198.485" y="-379.892" width="461.347" height="103.803"/>
+		<text transform="matrix(1 0 0 1 260.0003 -299.1528)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="92.2693">LDO TV</text>
+		<rect x="-147.525" y="-276.09" width="230.673" height="115.337"/>
+		<rect x="83.148" y="-276.09" fill="#FFFFFF" width="692.02" height="115.337"/>
+		<rect x="132.166" y="-276.09" width="11.534" height="115.337"/>
+		<rect x="775.168" y="-276.09" width="230.673" height="115.337"/>
+		<pattern  id="SVGID_8_" xlink:href="#uppercheck" patternTransform="matrix(3.7795 0 0 -3.7795 25219.6875 -33894.0391)">
+		</pattern>
+		<rect x="-205.194" y="-160.753" fill="url(#SVGID_8_)" width="1268.703" height="115.337"/>
+		<desc>big coloured squares</desc>
+		<rect x="-262.862" y="-45.416" fill="#FFFF00" width="230.673" height="230.673"/>
+		<rect x="-32.189" y="-45.416" fill="#00FFFF" width="230.673" height="230.673"/>
+		<rect x="198.485" y="-45.416" fill="#00FF00" width="230.673" height="230.673"/>
+		<rect x="429.158" y="-45.416" fill="#FF00FF" width="230.673" height="230.673"/>
+		<rect x="659.831" y="-45.416" fill="#FF0000" width="230.673" height="230.673"/>
+		<rect x="890.505" y="-45.416" fill="#0000FF" width="230.673" height="230.673"/>
+		<desc>graduated gratings</desc>
+		<rect x="-262.862" y="300.594" width="57.668" height="230.673"/>
+		<rect x="1063.51" y="300.594" width="57.668" height="230.673"/>
+		<pattern  id="SVGID_9_" xlink:href="#grating5" patternTransform="matrix(3.7795 0 0 -3.7795 25748.9395 -34948.4375)">
+		</pattern>
+		<rect x="-205.194" y="300.594" fill="url(#SVGID_9_)" width="253.741" height="230.673"/>
+		<pattern  id="SVGID_10_" xlink:href="#grating10" patternTransform="matrix(3.7795 0 0 -3.7795 25748.9395 -34948.4375)">
+		</pattern>
+		<rect x="48.547" y="300.594" fill="url(#SVGID_10_)" width="253.741" height="230.673"/>
+		<pattern  id="SVGID_11_" xlink:href="#grating15" patternTransform="matrix(3.7795 0 0 -3.7795 25769.9238 -34948.4375)">
+		</pattern>
+		<rect x="302.288" y="300.594" fill="url(#SVGID_11_)" width="253.741" height="230.673"/>
+		<pattern  id="SVGID_12_" xlink:href="#grating20" patternTransform="matrix(3.7795 0 0 -3.7795 25764.6523 -34948.4375)">
+		</pattern>
+		<rect x="556.028" y="300.594" fill="url(#SVGID_12_)" width="253.741" height="230.673"/>
+		<pattern  id="SVGID_13_" xlink:href="#grating25" patternTransform="matrix(3.7795 0 0 -3.7795 25761.5098 -34948.4375)">
+		</pattern>
+		<rect x="809.769" y="300.594" fill="url(#SVGID_13_)" width="253.741" height="230.673"/>
+		<desc>centre cross-shaped grid with vertical middle line</desc>
+		<pattern  id="SVGID_14_" xlink:href="#centergrid" patternTransform="matrix(3.7795 0 0 -3.7795 25429.7949 -34421.2383)">
+		</pattern>
+		<path fill="url(#SVGID_14_)" d="M-320.53,185.257h692.02l5.767-109.57h103.803v109.57h697.787v115.337H481.059v109.57H377.256
+			v-109.57H-320.53V185.257z"/>
+		<rect x="423.391" y="75.687" fill="#FFFFFF" width="11.534" height="334.476"/>
+		<desc>graduated greyscale rectangles</desc>
+		<rect x="-205.194" y="531.267" width="207.606" height="115.337"/>
+		<rect x="2.412" y="531.267" fill="#333333" width="219.14" height="115.337"/>
+		<rect x="221.552" y="531.267" fill="#666666" width="207.606" height="115.337"/>
+		<rect x="429.158" y="531.267" fill="#999999" width="219.14" height="115.337"/>
+		<rect x="648.298" y="531.267" fill="#CCCCCC" width="207.606" height="115.337"/>
+		<rect x="855.904" y="531.267" fill="#FFFFFF" width="207.606" height="115.337"/>
+		<desc>place for lower caption</desc>
+		<rect x="-205.194" y="646.604" fill="#FFFFFF" width="1268.703" height="115.337"/>
+		<rect x="-89.857" y="761.94" fill="#FFFF00" width="1038.03" height="230.673"/>
+		<rect x="371.49" y="761.94" fill="#FF0000" width="115.337" height="230.673"/>
+	</g>
+</g>
+<desc>surrounding pastel rectangles</desc>
+<rect x="-320.53" y="-385.659" fill="#4180BE" width="109.57" height="224.906"/>
+<rect x="-430.1" y="-385.659" fill="#41BE80" width="109.57" height="628.585"/>
+<rect x="-430.1" y="242.925" fill="#BE4180" width="109.57" height="628.585"/>
+<rect x="-320.53" y="646.604" fill="#BE8041" width="109.57" height="224.906"/>
+<rect x="1069.276" y="-385.659" fill="#4180BE" width="109.57" height="224.906"/>
+<rect x="1178.846" y="-385.659" fill="#80BE41" width="109.57" height="628.585"/>
+<rect x="1178.846" y="242.925" fill="#8041BE" width="109.57" height="628.585"/>
+<rect x="1069.276" y="646.604" fill="#BE8041" width="109.57" height="224.906"/>
+<desc>corner radials</desc>
+<g>
+	<g>
+		<desc>put the lot together</desc>
+		<circle stroke="#FFFFFF" stroke-width="3.0516" cx="-666.54" cy="-276.09" r="173.005"/>
+		<g>
+			<g id="rayquadrant">
+				<desc>one quadrant of rays</desc>
+				<g transform="rotate(-15)">
+					<path id="ray" fill="#FFFFFF" d="M-666.54-276.09l49.122,165.946l-8.69,2.328L-666.54-276.09z"/>
+				</g>
+				<g transform="rotate(-9)">
+					<path id="ray_1_" fill="#FFFFFF" d="M-666.54-276.09l31.507,170.171l-8.885,1.407L-666.54-276.09z"/>
+				</g>
+				<g transform="rotate(-3)">
+					<path id="ray_2_" fill="#FFFFFF" d="M-666.54-276.09l13.546,172.532l-8.984,0.471L-666.54-276.09z"/>
+				</g>
+				<g transform="rotate(3)">
+					<path id="ray_3_" fill="#FFFFFF" d="M-666.54-276.09l-4.562,173.003l-8.984-0.471L-666.54-276.09z"/>
+				</g>
+				<g transform="rotate(9)">
+					<path id="ray_4_" fill="#FFFFFF" d="M-666.54-276.09l-22.621,171.579l-8.885-1.407L-666.54-276.09z"/>
+				</g>
+				<g transform="scale(1.5)">
+					<path id="ray_5_" fill="#FFFFFF" d="M-666.54-276.09l-40.432,168.274l-8.69-2.328L-666.54-276.09z"/>
+				</g>
+			</g>
+			<g>
+				<g id="rayquadrant_1_">
+					<desc>one quadrant of rays</desc>
+					<g transform="rotate(-15)">
+						<path id="ray_6_" fill="#FFFFFF" d="M-666.54-276.09l-165.946,49.122l-2.328-8.69L-666.54-276.09z"/>
+					</g>
+					<g transform="rotate(-9)">
+						<path id="ray_7_" fill="#FFFFFF" d="M-666.54-276.09l-170.171,31.507l-1.407-8.885L-666.54-276.09z"/>
+					</g>
+					<g transform="rotate(-3)">
+						<path id="ray_8_" fill="#FFFFFF" d="M-666.54-276.09l-172.532,13.546l-0.471-8.984L-666.54-276.09z"/>
+					</g>
+					<g transform="rotate(3)">
+						<path id="ray_9_" fill="#FFFFFF" d="M-666.54-276.09l-173.003-4.562l0.471-8.984L-666.54-276.09z"/>
+					</g>
+					<g transform="rotate(9)">
+						<path id="ray_10_" fill="#FFFFFF" d="M-666.54-276.09l-171.579-22.621l1.407-8.885L-666.54-276.09z"/>
+					</g>
+					<g transform="scale(1.5) rotate(90)">
+						<path id="ray_11_" fill="#FFFFFF" d="M-666.54-276.09l-168.274-40.432l2.328-8.69L-666.54-276.09z"/>
+					</g>
+				</g>
+				<g>
+					<g id="rayquadrant_2_">
+						<desc>one quadrant of rays</desc>
+						<g transform="rotate(-15)">
+							<path id="ray_12_" fill="#FFFFFF" d="M-666.54-276.09l-49.122-165.946l8.69-2.328L-666.54-276.09z"/>
+						</g>
+						<g transform="rotate(-9)">
+							<path id="ray_13_" fill="#FFFFFF" d="M-666.54-276.09l-31.507-170.171l8.885-1.407L-666.54-276.09z"/>
+						</g>
+						<g transform="rotate(-3)">
+							<path id="ray_14_" fill="#FFFFFF" d="M-666.54-276.09l-13.546-172.532l8.984-0.471L-666.54-276.09z"/>
+						</g>
+						<g transform="rotate(3)">
+							<path id="ray_15_" fill="#FFFFFF" d="M-666.54-276.09l4.562-173.003l8.984,0.471L-666.54-276.09z"/>
+						</g>
+						<g transform="rotate(9)">
+							<path id="ray_16_" fill="#FFFFFF" d="M-666.54-276.09l22.621-171.579l8.885,1.407L-666.54-276.09z"/>
+						</g>
+						<g transform="scale(1.5) rotate(180)">
+							<path id="ray_17_" fill="#FFFFFF" d="M-666.54-276.09l40.432-168.274l8.69,2.328L-666.54-276.09z"/>
+						</g>
+					</g>
+					<g id="radial">
+						<g id="rayquadrant_3_">
+							<desc>one quadrant of rays</desc>
+							<g transform="rotate(-15)">
+								<path id="ray_18_" fill="#FFFFFF" d="M-666.54-276.09l165.946-49.122l2.328,8.69L-666.54-276.09z"/>
+							</g>
+							<g transform="rotate(-9)">
+								<path id="ray_19_" fill="#FFFFFF" d="M-666.54-276.09l170.171-31.507l1.407,8.885L-666.54-276.09z"/>
+							</g>
+							<g transform="rotate(-3)">
+								<path id="ray_20_" fill="#FFFFFF" d="M-666.54-276.09l172.532-13.546l0.471,8.984L-666.54-276.09z"/>
+							</g>
+							<g transform="rotate(3)">
+								<path id="ray_21_" fill="#FFFFFF" d="M-666.54-276.09l173.003,4.562l-0.471,8.984L-666.54-276.09z"/>
+							</g>
+							<g transform="rotate(9)">
+								<path id="ray_22_" fill="#FFFFFF" d="M-666.54-276.09l171.579,22.621l-1.407,8.885L-666.54-276.09z"/>
+							</g>
+							<g transform="translate(20, 20)">
+								<path id="ray_23_" fill="#FFFFFF" d="M-666.54-276.09l168.274,40.432l-2.328,8.69L-666.54-276.09z"/>
+							</g>
+						</g>
+						<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="-276.09" r="40.368"/>
+						<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="-276.09" r="28.834"/>
+						<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="-276.09" r="17.3"/>
+					</g>
+					<g>
+						<g>
+							<desc>put the lot together</desc>
+							<circle stroke="#FFFFFF" stroke-width="3.0516" cx="1524.856" cy="-276.09" r="173.005"/>
+							<g>
+								<g id="rayquadrant_4_">
+									<desc>one quadrant of rays</desc>
+									<g transform="rotate(-15)">
+										<path id="ray_24_" fill="#FFFFFF" d="M1524.856-276.09l49.122,165.946l-8.69,2.328L1524.856-276.09z"/>
+									</g>
+									<g transform="rotate(-9)">
+										<path id="ray_25_" fill="#FFFFFF" d="M1524.856-276.09l31.507,170.171l-8.886,1.407L1524.856-276.09z"/>
+									</g>
+									<g transform="rotate(-3)">
+										<path id="ray_26_" fill="#FFFFFF" d="M1524.856-276.09l13.546,172.532l-8.984,0.471L1524.856-276.09z"/>
+									</g>
+									<g transform="rotate(3)">
+										<path id="ray_27_" fill="#FFFFFF" d="M1524.856-276.09l-4.563,173.003l-8.984-0.471L1524.856-276.09z"/>
+									</g>
+									<g transform="rotate(9)">
+										<path id="ray_28_" fill="#FFFFFF" d="M1524.856-276.09l-22.621,171.579l-8.885-1.407L1524.856-276.09z"/>
+									</g>
+									<g transform="scale(1.5)">
+										<path id="ray_29_" fill="#FFFFFF" d="M1524.856-276.09l-40.432,168.274l-8.69-2.328L1524.856-276.09z"/>
+									</g>
+								</g>
+								<g>
+									<g id="rayquadrant_5_">
+										<desc>one quadrant of rays</desc>
+										<g transform="rotate(-15)">
+											<path id="ray_30_" fill="#FFFFFF" d="M1524.856-276.09l-165.946,49.122l-2.328-8.69L1524.856-276.09z"/>
+										</g>
+										<g transform="rotate(-9)">
+											<path id="ray_31_" fill="#FFFFFF" d="M1524.856-276.09l-170.171,31.507l-1.407-8.885L1524.856-276.09z"/>
+										</g>
+										<g transform="rotate(-3)">
+											<path id="ray_32_" fill="#FFFFFF" d="M1524.856-276.09l-172.532,13.546l-0.471-8.984L1524.856-276.09z"/>
+										</g>
+										<g transform="rotate(3)">
+											<path id="ray_33_" fill="#FFFFFF" d="M1524.856-276.09l-173.003-4.562l0.471-8.984L1524.856-276.09z"/>
+										</g>
+										<g transform="rotate(9)">
+											<path id="ray_34_" fill="#FFFFFF" d="M1524.856-276.09l-171.579-22.621l1.407-8.885L1524.856-276.09z"/>
+										</g>
+										<g transform="scale(1.5) rotate(90)">
+											<path id="ray_35_" fill="#FFFFFF" d="M1524.856-276.09l-168.274-40.432l2.328-8.69L1524.856-276.09z"/>
+										</g>
+									</g>
+									<g>
+										<g id="rayquadrant_6_">
+											<desc>one quadrant of rays</desc>
+											<g transform="rotate(-15)">
+												<path id="ray_36_" fill="#FFFFFF" d="M1524.856-276.09l-49.122-165.946l8.69-2.328L1524.856-276.09z"/>
+											</g>
+											<g transform="rotate(-9)">
+												<path id="ray_37_" fill="#FFFFFF" d="M1524.856-276.09l-31.507-170.171l8.885-1.407L1524.856-276.09z"/>
+											</g>
+											<g transform="rotate(-3)">
+												<path id="ray_38_" fill="#FFFFFF" d="M1524.856-276.09l-13.546-172.532l8.984-0.471L1524.856-276.09z"/>
+											</g>
+											<g transform="rotate(3)">
+												<path id="ray_39_" fill="#FFFFFF" d="M1524.856-276.09l4.562-173.003l8.984,0.471L1524.856-276.09z"/>
+											</g>
+											<g transform="rotate(9)">
+												<path id="ray_40_" fill="#FFFFFF" d="M1524.856-276.09l22.621-171.579l8.886,1.407L1524.856-276.09z"/>
+											</g>
+											<g transform="scale(1.5) rotate(180)">
+												<path id="ray_41_" fill="#FFFFFF" d="M1524.856-276.09l40.432-168.274l8.69,2.328L1524.856-276.09z"/>
+											</g>
+										</g>
+										<g id="radial_1_">
+											<g id="rayquadrant_7_">
+												<desc>one quadrant of rays</desc>
+												<g transform="rotate(-15)">
+													<path id="ray_42_" fill="#FFFFFF" d="M1524.856-276.09l165.946-49.122l2.328,8.69L1524.856-276.09z"/>
+												</g>
+												<g transform="rotate(-9)">
+													<path id="ray_43_" fill="#FFFFFF" d="M1524.856-276.09l170.171-31.507l1.407,8.885L1524.856-276.09z"/>
+												</g>
+												<g transform="rotate(-3)">
+													<path id="ray_44_" fill="#FFFFFF" d="M1524.856-276.09l172.532-13.546l0.471,8.984L1524.856-276.09z"/>
+												</g>
+												<g transform="rotate(3)">
+													<path id="ray_45_" fill="#FFFFFF" d="M1524.856-276.09l173.003,4.562l-0.471,8.984L1524.856-276.09z"/>
+												</g>
+												<g transform="rotate(9)">
+													<path id="ray_46_" fill="#FFFFFF" d="M1524.856-276.09l171.579,22.621l-1.407,8.885L1524.856-276.09z"/>
+												</g>
+												<g transform="translate(210, 20)">
+													<path id="ray_47_" fill="#FFFFFF" d="M1524.856-276.09l168.274,40.432l-2.328,8.69L1524.856-276.09z"/>
+												</g>
+											</g>
+											<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="-276.09" r="40.368"/>
+											<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="-276.09" r="28.834"/>
+											<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="-276.09" r="17.3"/>
+										</g>
+										<g>
+											<g>
+												<desc>put the lot together</desc>
+												<circle stroke="#FFFFFF" stroke-width="3.0516" cx="-666.54" cy="761.94" r="173.005"/>
+												<g>
+													<g id="rayquadrant_8_">
+														<desc>one quadrant of rays</desc>
+														<g transform="rotate(-15)">
+															<path id="ray_48_" fill="#FFFFFF" d="M-666.54,761.94l49.122,165.946l-8.69,2.328L-666.54,761.94z"/>
+														</g>
+														<g transform="rotate(-9)">
+															<path id="ray_49_" fill="#FFFFFF" d="M-666.54,761.94l31.507,170.171l-8.885,1.407L-666.54,761.94z"/>
+														</g>
+														<g transform="rotate(-3)">
+															<path id="ray_50_" fill="#FFFFFF" d="M-666.54,761.94l13.546,172.532l-8.984,0.471L-666.54,761.94z"/>
+														</g>
+														<g transform="rotate(3)">
+															<path id="ray_51_" fill="#FFFFFF" d="M-666.54,761.94l-4.562,173.003l-8.984-0.471L-666.54,761.94z"/>
+														</g>
+														<g transform="rotate(9)">
+															<path id="ray_52_" fill="#FFFFFF" d="M-666.54,761.94l-22.621,171.579l-8.885-1.407L-666.54,761.94z"/>
+														</g>
+														<g transform="scale(1.5)">
+															<path id="ray_53_" fill="#FFFFFF" d="M-666.54,761.94l-40.432,168.274l-8.69-2.328L-666.54,761.94z"/>
+														</g>
+													</g>
+													<g>
+														<g id="rayquadrant_9_">
+															<desc>one quadrant of rays</desc>
+															<g transform="rotate(-15)">
+																<path id="ray_54_" fill="#FFFFFF" d="M-666.54,761.94l-165.946,49.122l-2.328-8.69L-666.54,761.94z"/>
+															</g>
+															<g transform="rotate(-9)">
+																<path id="ray_55_" fill="#FFFFFF" d="M-666.54,761.94l-170.171,31.507l-1.407-8.885L-666.54,761.94z"/>
+															</g>
+															<g transform="rotate(-3)">
+																<path id="ray_56_" fill="#FFFFFF" d="M-666.54,761.94l-172.532,13.546l-0.471-8.984L-666.54,761.94z"/>
+															</g>
+															<g transform="rotate(3)">
+																<path id="ray_57_" fill="#FFFFFF" d="M-666.54,761.94l-173.003-4.562l0.471-8.984L-666.54,761.94z"/>
+															</g>
+															<g transform="rotate(9)">
+																<path id="ray_58_" fill="#FFFFFF" d="M-666.54,761.94l-171.579-22.621l1.407-8.885L-666.54,761.94z"/>
+															</g>
+															<g transform="scale(1.5) rotate(90)">
+																<path id="ray_59_" fill="#FFFFFF" d="M-666.54,761.94l-168.274-40.432l2.328-8.69L-666.54,761.94z"/>
+															</g>
+														</g>
+														<g>
+															<g id="rayquadrant_10_">
+																<desc>one quadrant of rays</desc>
+																<g transform="rotate(-15)">
+																	<path id="ray_60_" fill="#FFFFFF" d="M-666.54,761.94l-49.122-165.946l8.69-2.328L-666.54,761.94z"/>
+																</g>
+																<g transform="rotate(-9)">
+																	<path id="ray_61_" fill="#FFFFFF" d="M-666.54,761.94l-31.507-170.171l8.885-1.407L-666.54,761.94z"/>
+																</g>
+																<g transform="rotate(-3)">
+																	<path id="ray_62_" fill="#FFFFFF" d="M-666.54,761.94l-13.546-172.532l8.984-0.471L-666.54,761.94z"/>
+																</g>
+																<g transform="rotate(3)">
+																	<path id="ray_63_" fill="#FFFFFF" d="M-666.54,761.94l4.562-173.003l8.984,0.471L-666.54,761.94z"/>
+																</g>
+																<g transform="rotate(9)">
+																	<path id="ray_64_" fill="#FFFFFF" d="M-666.54,761.94l22.621-171.579l8.885,1.407L-666.54,761.94z"/>
+																</g>
+																<g transform="scale(1.5) rotate(180)">
+																	<path id="ray_65_" fill="#FFFFFF" d="M-666.54,761.94l40.432-168.274l8.69,2.328L-666.54,761.94z"/>
+																</g>
+															</g>
+															<g id="radial_2_">
+																<g id="rayquadrant_11_">
+																	<desc>one quadrant of rays</desc>
+																	<g transform="rotate(-15)">
+																		<path id="ray_66_" fill="#FFFFFF" d="M-666.54,761.94l165.946-49.122l2.328,8.69L-666.54,761.94z"/>
+																	</g>
+																	<g transform="rotate(-9)">
+																		<path id="ray_67_" fill="#FFFFFF" d="M-666.54,761.94l170.171-31.507l1.407,8.885L-666.54,761.94z"/>
+																	</g>
+																	<g transform="rotate(-3)">
+																		<path id="ray_68_" fill="#FFFFFF" d="M-666.54,761.94l172.532-13.546l0.471,8.984L-666.54,761.94z"/>
+																	</g>
+																	<g transform="rotate(3)">
+																		<path id="ray_69_" fill="#FFFFFF" d="M-666.54,761.94l173.003,4.562l-0.471,8.984L-666.54,761.94z"/>
+																	</g>
+																	<g transform="rotate(9)">
+																		<path id="ray_70_" fill="#FFFFFF" d="M-666.54,761.94l171.579,22.621l-1.407,8.885L-666.54,761.94z"/>
+																	</g>
+																	<g transform="translate(20, 110)">
+																		<path id="ray_71_" fill="#FFFFFF" d="M-666.54,761.94l168.274,40.432l-2.328,8.69L-666.54,761.94z"/>
+																	</g>
+																</g>
+																<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="761.94" r="40.368"/>
+																<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="761.94" r="28.834"/>
+																<circle stroke="#FFFFFF" stroke-width="1.5258" cx="-666.54" cy="761.94" r="17.3"/>
+															</g>
+															<g>
+																<g>
+																	<desc>put the lot together</desc>
+																	<circle stroke="#FFFFFF" stroke-width="3.0516" cx="1524.856" cy="761.94" r="173.005"/>
+																	<g>
+																		<g id="rayquadrant_12_">
+																			<desc>one quadrant of rays</desc>
+																			<g transform="rotate(-15)">
+																				<path id="ray_72_" fill="#FFFFFF" d="M1524.856,761.94l49.122,165.946l-8.69,2.328L1524.856,761.94z"/>
+																			</g>
+																			<g transform="rotate(-9)">
+																				<path id="ray_73_" fill="#FFFFFF" d="M1524.856,761.94l31.507,170.171l-8.886,1.407L1524.856,761.94z"/>
+																			</g>
+																			<g transform="rotate(-3)">
+																				<path id="ray_74_" fill="#FFFFFF" d="M1524.856,761.94l13.546,172.532l-8.984,0.471L1524.856,761.94z"/>
+																			</g>
+																			<g transform="rotate(3)">
+																				<path id="ray_75_" fill="#FFFFFF" d="M1524.856,761.94l-4.563,173.003l-8.984-0.471L1524.856,761.94z"/>
+																			</g>
+																			<g transform="rotate(9)">
+																				<path id="ray_76_" fill="#FFFFFF" d="M1524.856,761.94l-22.621,171.579l-8.885-1.407L1524.856,761.94z"/>
+																			</g>
+																			<g transform="scale(1.5)">
+																				<path id="ray_77_" fill="#FFFFFF" d="M1524.856,761.94l-40.432,168.274l-8.69-2.328L1524.856,761.94z"/>
+																			</g>
+																		</g>
+																		<g>
+																			<g id="rayquadrant_13_">
+																				<desc>one quadrant of rays</desc>
+																				<g transform="rotate(-15)">
+																					<path id="ray_78_" fill="#FFFFFF" d="M1524.856,761.94l-165.946,49.122l-2.328-8.69L1524.856,761.94z"/>
+																				</g>
+																				<g transform="rotate(-9)">
+																					<path id="ray_79_" fill="#FFFFFF" d="M1524.856,761.94l-170.171,31.507l-1.407-8.885L1524.856,761.94z"/>
+																				</g>
+																				<g transform="rotate(-3)">
+																					<path id="ray_80_" fill="#FFFFFF" d="M1524.856,761.94l-172.532,13.546l-0.471-8.984L1524.856,761.94z"/>
+																				</g>
+																				<g transform="rotate(3)">
+																					<path id="ray_81_" fill="#FFFFFF" d="M1524.856,761.94l-173.003-4.562l0.471-8.984L1524.856,761.94z"/>
+																				</g>
+																				<g transform="rotate(9)">
+																					<path id="ray_82_" fill="#FFFFFF" d="M1524.856,761.94l-171.579-22.621l1.407-8.885L1524.856,761.94z"/>
+																				</g>
+																				<g transform="scale(1.5) rotate(90)">
+																					<path id="ray_83_" fill="#FFFFFF" d="M1524.856,761.94l-168.274-40.432l2.328-8.69L1524.856,761.94z"/>
+																				</g>
+																			</g>
+																			<g>
+																				<g id="rayquadrant_14_">
+																					<desc>one quadrant of rays</desc>
+																					<g transform="rotate(-15)">
+																						<path id="ray_84_" fill="#FFFFFF" d="M1524.856,761.94l-49.122-165.946l8.69-2.328L1524.856,761.94z"/>
+																					</g>
+																					<g transform="rotate(-9)">
+																						<path id="ray_85_" fill="#FFFFFF" d="M1524.856,761.94l-31.507-170.171l8.885-1.407L1524.856,761.94z"/>
+																					</g>
+																					<g transform="rotate(-3)">
+																						<path id="ray_86_" fill="#FFFFFF" d="M1524.856,761.94l-13.546-172.532l8.984-0.471L1524.856,761.94z"/>
+																					</g>
+																					<g transform="rotate(3)">
+																						<path id="ray_87_" fill="#FFFFFF" d="M1524.856,761.94l4.562-173.003l8.984,0.471L1524.856,761.94z"/>
+																					</g>
+																					<g transform="rotate(9)">
+																						<path id="ray_88_" fill="#FFFFFF" d="M1524.856,761.94l22.621-171.579l8.886,1.407L1524.856,761.94z"/>
+																					</g>
+																					<g transform="scale(1.5) rotate(180)">
+																						<path id="ray_89_" fill="#FFFFFF" d="M1524.856,761.94l40.432-168.274l8.69,2.328L1524.856,761.94z"/>
+																					</g>
+																				</g>
+																				<g id="radial_3_">
+																					<g id="rayquadrant_15_">
+																						<desc>one quadrant of rays</desc>
+																						<g transform="rotate(-15)">
+																							<path id="ray_90_" fill="#FFFFFF" d="M1524.856,761.94l165.946-49.122l2.328,8.69L1524.856,761.94z"/>
+																						</g>
+																						<g transform="rotate(-9)">
+																							<path id="ray_91_" fill="#FFFFFF" d="M1524.856,761.94l170.171-31.507l1.407,8.885L1524.856,761.94z"/>
+																						</g>
+																						<g transform="rotate(-3)">
+																							<path id="ray_92_" fill="#FFFFFF" d="M1524.856,761.94l172.532-13.546l0.471,8.984L1524.856,761.94z"/>
+																						</g>
+																						<g transform="rotate(3)">
+																							<path id="ray_93_" fill="#FFFFFF" d="M1524.856,761.94l173.003,4.562l-0.471,8.984L1524.856,761.94z"/>
+																						</g>
+																						<g transform="rotate(9)">
+																							<path id="ray_94_" fill="#FFFFFF" d="M1524.856,761.94l171.579,22.621l-1.407,8.885L1524.856,761.94z"/>
+																						</g>
+																						<g transform="translate(210, 110)">
+																							<path id="ray_95_" fill="#FFFFFF" d="M1524.856,761.94l168.274,40.432l-2.328,8.69L1524.856,761.94z"/>
+																						</g>
+																					</g>
+																					<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="761.94" r="40.368"/>
+																					<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="761.94" r="28.834"/>
+																					<circle stroke="#FFFFFF" stroke-width="1.5258" cx="1524.856" cy="761.94" r="17.3"/>
+																				</g>
+																			</g>
+																		</g>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
