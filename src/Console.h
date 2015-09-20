@@ -57,7 +57,9 @@ struct ConsoleWindow
 		Items.clear();
 		ScrollToBottom = true;
 	}
-
+	void AddLog(std::string msg){
+		AddLog(msg.c_str());
+	}
 	void    AddLog(const char* fmt, ...) IM_PRINTFARGS(2)
 	{
 		char buf[1024];

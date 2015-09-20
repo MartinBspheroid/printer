@@ -12,6 +12,9 @@
 #include "plotterExporter.h"
 #include "cinder/svg/Svg.h"
 #include "cinder/Vector.h"
+
+
+#include "Plotter.h"
 // freestanding message callback...
 
 void MessageCallback(const asSMessageInfo *msg, void *param)
@@ -51,10 +54,14 @@ public:
 	void fileDrop(FileDropEvent event) override;
 	fs::path svg_path;
 
+
+	Plotter mPlotter;
+
 };
 
 void Plotter_glNextApp::setup()
-{
+{	
+	
 	ui::initialize();
 	terminal.AddCallback([=](string data){
 		console() << data << endl;
@@ -101,7 +108,7 @@ void Plotter_glNextApp::setup()
 			console() << "\n\tSCRIPT RELOADED with ERRORS!\n\n" << endl;
 		}
 	});
-
+	mPlotter.setCallback([&](string data){pushSerialCommand(data);});
 }
 
 
@@ -176,6 +183,13 @@ void Plotter_glNextApp::update()
 			terminal.AddLog("file is not yet loaded");
 		}
 	}
+	ui::SameLine();
+	if (ui::Button("PenTest")){
+		mPlotter.selectPen(1);
+		mPlotter.selectPen(2);
+		mPlotter.selectPen(3);
+	}
+
 
 }
 
@@ -210,6 +224,7 @@ void Plotter_glNextApp::cleanup()
 {
 	mSerial->flush();
 	mSerial->close();
+	ui::Shutdown();
 }
 
 void Plotter_glNextApp::SVG(const fs::path file)
@@ -257,7 +272,7 @@ void Plotter_glNextApp::SVG(const fs::path file)
 							mScript->call("void drawLineTo(float x, float y)", m.getSegmentPosition(i, 0).x, m.getSegmentPosition(i, 0).y);
 						}*/
 						
-						terminal.AddLog("segments" + toString(m.getNumSegments()).c_str());
+						//terminal.AddLog("segments" + toString(m.getNumSegments()).c_str());
 						for (float pos = 0.1; pos <= 1;){
 							vec2 v1 = m.getSegmentPosition(i, pos);
 							mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
