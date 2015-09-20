@@ -238,36 +238,31 @@ void Plotter_glNextApp::SVG(const fs::path file)
 	for (auto s : mDoc->getChildren()){
 		auto c = s->getShapeAbsolute().getContours();
 		for (auto &m : c){
-			for (size_t i = 0; i < m.getNumSegments(); i++)
+			for (size_t i = 0; i < m.getNumSegments(); i++){
 
 				// types MOVETO, LINETO, QUADTO, CUBICTO, CLOSE
-				switch (m.getSegmentType(i))
-			{
-				case Path2d::MOVETO:
-					mScript->call("void svgMoveTo()");
-					break;
-				case Path2d::LINETO:
+				if (m.getSegmentType(i) == Path2d::LINETO){
 					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-					break;
-				case Path2d::QUADTO:
+					
+				}
+				if (m.getSegmentType(i) == Path2d::MOVETO){
+					mScript->call("void svgMoveTo()");
+				}
+				if (m.getSegmentType(i) == Path2d::QUADTO){
 					mScript->call("void svgQuadTo()");
-					break;
-				case Path2d::CUBICTO:
+				}
+				if (m.getSegmentType(i) == Path2d::CUBICTO){
 					mScript->call("void svgCubicTo()");
 					for (float pos = 0.1; pos <= 1;){
 						vec2 v1 = m.getSegmentPosition(i, pos);
 						mScript->call("void drawLineTo(float x, float y)", v1.x, v1.y);
 						pos += 0.1;
 					}
-					break;
-				case Path2d::CLOSE:
+				}
+				if (m.getSegmentType(i) == Path2d::CLOSE){
 					mScript->call("void drawLine(float x1, float y1, float x2, float y2)", m.getSegmentPosition(i, 0.0f).x, m.getSegmentPosition(i, 0.0f).y, m.getSegmentPosition(i, 1.0f).x, m.getSegmentPosition(i, 1.0f).y);
-					break;
-				default:
-					mScript->call("void svgDefault()");
-					break;
+				}
 			}
-
 		}
 	}
 }
